@@ -6,6 +6,13 @@
  */
 
 module.exports = {
-	
+	scrapeArticles: function(req, res) {
+    ScrapeArticles.scrapeArticle(req.body.url, function(err, data) {
+      if(err) {
+        return res.negotatiate(err);
+      }
+      return res.json(data);
+    });
+  }
 };
 

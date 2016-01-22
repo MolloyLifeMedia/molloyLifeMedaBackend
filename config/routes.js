@@ -34,7 +34,10 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+
+
+  'POST /articles/scrape': 'Article.scrapeArticles'
 
   /***************************************************************************
   *                                                                          *
